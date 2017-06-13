@@ -107,7 +107,7 @@ class User
                     'name' => 'not_empty'
                 ),
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
                 array(
                     'name' => 'string_length',
@@ -242,7 +242,7 @@ class User
                     'name' => 'not_empty'
                 ),
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
                 array(
                     'name' => 'string_length',
@@ -369,7 +369,7 @@ class User
                     'name' => 'not_empty'
                 ),
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
                 array(
                     'name' => 'string_length',
@@ -387,7 +387,7 @@ class User
                     'name' => 'not_empty'
                 ),
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
                 array(
                     'name' => 'string_length',
@@ -421,7 +421,7 @@ class User
             'name' => 'terms',
             'validators' => array(
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
             )
         ),
@@ -470,7 +470,7 @@ class User
                     'name' => 'not_empty'
                 ),
                 array(
-                    'name' => 'int'
+                    'name' => 'Digits'
                 ),
                 array(
                     'name' => 'string_length',
