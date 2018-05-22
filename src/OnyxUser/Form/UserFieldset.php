@@ -243,6 +243,27 @@ class UserFieldset extends Fieldset implements InputFilterProviderInterface
                 )
             ));
 
+            $this->add(array(
+                'name' => 'subscribe_copy',
+                'type' => 'Zend\Form\Element\Text',
+                'options' => array(
+                    'label' => 'subscribe_copy'
+                ),
+                'attributes' => array(
+                    'required' => 'required'
+                )
+            ));
+
+            $this->add(array(
+                'name' => 'subscribe_source',
+                'type' => 'Zend\Form\Element\Text',
+                'options' => array(
+                    'label' => 'subscribe_source'
+                ),
+                'attributes' => array(
+                    'required' => 'required'
+                )
+            ));
         
             $this->add(array(
                 'name' => 'role',

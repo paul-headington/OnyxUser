@@ -78,6 +78,10 @@ class User
 
     public $mobilesubscribe = 0;
 
+    public $subscribe_copy = null;
+
+    public $subscribe_source = null;
+
     public $role = null;
 
     public $terms = null;
@@ -388,6 +392,44 @@ class User
                 ),
                 array(
                     'name' => 'Digits'
+                ),
+                array(
+                    'name' => 'string_length',
+                    'options' => array(
+                        'min' => 1
+                    )
+                )
+            )
+        ),
+        'subscribe_copy' => array(
+            'required' => false,
+            'name' => 'subscribe_copy',
+            'filters' => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name' => 'not_empty'
+                ),
+                array(
+                    'name' => 'string_length',
+                    'options' => array(
+                        'min' => 1
+                    )
+                )
+            )
+        ),
+        'subscribe_source' => array(
+            'required' => false,
+            'name' => 'subscribe_source',
+            'filters' => array(
+                array('name' => 'StripTags'),
+                array('name' => 'StringTrim'),
+            ),
+            'validators' => array(
+                array(
+                    'name' => 'not_empty'
                 ),
                 array(
                     'name' => 'string_length',
@@ -787,6 +829,8 @@ class User
         $this->phoneguid		= (isset($data["phoneguid"])) ? $data["phoneguid"] : $this->phoneguid;
         $this->subscribe		= (isset($data["subscribe"])) ? $data["subscribe"] : $this->subscribe;
         $this->mobilesubscribe		= (isset($data["mobilesubscribe"])) ? $data["mobilesubscribe"] : $this->mobilesubscribe;
+        $this->subscribe_copy		= (isset($data["subscribe_copy"])) ? $data["subscribe_copy"] : $this->subscribe_copy;
+        $this->subscribe_source		= (isset($data["subscribe_source"])) ? $data["subscribe_source"] : $this->subscribe_source;
         $this->role		= (isset($data["role"])) ? $data["role"] : $this->role;
         $this->terms		= (isset($data["terms"])) ? $data["terms"] : $this->terms;
         $this->facebookdata		= (isset($data["facebookdata"])) ? $data["facebookdata"] : $this->facebookdata;
